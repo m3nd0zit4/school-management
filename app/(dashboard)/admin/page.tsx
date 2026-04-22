@@ -1,4 +1,6 @@
 import UserCard from "@/app/components/UserCard"
+import CountChart from "@/app/components/CountChart"
+
 
 const AdminPage = () => {
   return (
@@ -16,7 +18,7 @@ const AdminPage = () => {
         <div className="flex gap-4 flex-col lg:flex-row">
           {/* Count Chart */}
           <div className="w-full lg:w-1/3 h-[450px]">
-
+            <CountChart/>
           </div>
           {/* Attendance Chart */}
           <div className="w-full lg:w-2/3 h-[450px]">
