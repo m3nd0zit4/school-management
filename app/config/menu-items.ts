@@ -44,6 +44,11 @@ export const menuSections: MenuSection[] = [
         href: "/",
         visible: ["admin", "teacher", "student", "parent"],
       },
+    ],
+  },
+    {
+    title: "STAFF",
+    items: [
       {
         icon: Users,
         label: "Teachers",
@@ -62,6 +67,12 @@ export const menuSections: MenuSection[] = [
         href: "/list/parents",
         visible: ["admin", "teacher"],
       },
+    ],
+  },
+    {
+    title: "CLASSES",
+    items: [
+
       {
         icon: BookOpen,
         label: "Subjects",
@@ -98,6 +109,11 @@ export const menuSections: MenuSection[] = [
         href: "/list/results",
         visible: ["admin", "teacher", "student", "parent"],
       },
+    ],
+  }, 
+    {
+    title: "CALENDAR",
+    items: [
       {
         icon: CalendarCheck,
         label: "Attendance",
@@ -123,7 +139,7 @@ export const menuSections: MenuSection[] = [
         visible: ["admin", "teacher", "student", "parent"],
       },
     ],
-  },
+    },
   {
     title: "OTHER",
     items: [
