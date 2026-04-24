@@ -11,7 +11,7 @@ export default function DashboardLayout({
     return (
       <div className="flex h-screen min-h-0">
         {/* Porcentajes en pantallas angostas dejan ~40px útiles; min-w garantiza espacio para el logo */}
-        <aside className="w-[14%] min-w-20 shrink-0 p-3 sm:min-w-[5.25rem] sm:p-4 md:w-[8%] md:min-w-20 lg:min-w-[13rem] lg:w-[16%] xl:w-[14%]">
+        <aside className="sidebar-scroll flex h-full w-[14%] min-w-20 shrink-0 flex-col overflow-y-auto p-3 sm:min-w-[5.25rem] sm:p-4 md:w-[8%] md:min-w-20 lg:min-w-[13rem] lg:w-[16%] xl:w-[14%]">
           <Link
             href="/"
             className="flex items-center justify-center gap-2 lg:min-w-0 lg:justify-start"

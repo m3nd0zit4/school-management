@@ -1,4 +1,6 @@
-import { BellIcon, MessageSquareIcon, SearchIcon, UserIcon } from "lucide-animated";
+"use client";
+
+import { Megaphone, MessageSquare, Search, User } from "lucide-react";
 
 const NavBar = () => {
   return (

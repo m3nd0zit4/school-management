@@ -1,4 +1,6 @@
-import { MenuIcon } from "lucide-animated";
+"use client";
+
+import { MoreHorizontal } from "lucide-react";
 
 const UserCard = ({ type }: { type: string }) => {
   return (

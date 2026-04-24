@@ -1,22 +1,23 @@
-import type { ComponentType, HTMLAttributes } from "react";
 import {
-  BellIcon,
-  BookTextIcon,
-  CalendarCheckIcon,
-  CalendarDaysIcon,
-  ChartBarIncreasingIcon,
-  CircleHelpIcon,
-  ClipboardCheckIcon,
-  LayersIcon,
-  ListIcon,
-  LogoutIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-  UserIcon,
-  UserRoundPlusIcon,
-  UsersIcon,
-  HomeIcon,
-} from "lucide-animated";
+  BarChart3,
+  BookMarked,
+  BookOpen,
+  Calendar,
+  CalendarCheck,
+  ClipboardList,
+  FileQuestion,
+  GraduationCap,
+  Home,
+  Layers,
+  LogOut,
+  Megaphone,
+  MessageSquare,
+  Settings,
+  User,
+  Users,
+  UsersRound,
+  type LucideIcon,
+} from "lucide-react";
 
 export type UserRole = "admin" | "teacher" | "student" | "parent";
 type AnimatedIcon = ComponentType<HTMLAttributes<HTMLDivElement> & { size?: number }>;
