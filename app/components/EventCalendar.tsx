@@ -36,7 +36,11 @@ const EventCalendar = () => {
 
   return (
     <div className="bg-white p-4 rounded-md">
-      <Calendar onChange={onChange} value={value} />
+      <Calendar
+        onChange={onChange}
+        value={value}
+        className="school-calendar"
+      />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold my-4">Events</h1>
         <MoreHorizontal className="size-5 cursor-pointer text-gray-500" strokeWidth={2} />
