@@ -1,5 +1,5 @@
 "use client";
-import { MenuIcon } from "lucide-animated";
+import { MoreHorizontal } from "lucide-react";
 import {
   BarChart,
   ResponsiveContainer,
@@ -49,7 +49,7 @@ const AttendanceChart = () => {
     <div className="flex h-full flex-col rounded-lg bg-white p-4">
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Attendance</h1>
-        <MenuIcon className="size-5 cursor-pointer text-gray-500" />
+        <MoreHorizontal className="size-5 cursor-pointer text-gray-500" strokeWidth={2} />
       </div>
       <div className="mt-4 min-h-0 flex-1">
         <ResponsiveContainer width="100%" height="100%">

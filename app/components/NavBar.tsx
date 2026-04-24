@@ -11,8 +11,9 @@ const NavBar = () => {
           htmlFor="navbar-search"
           className="flex w-full max-w-full items-center gap-3 rounded-xl border border-gray-200/80 bg-transparent px-3 py-2.5 transition-colors focus-within:border-gray-300 focus-within:ring-2 focus-within:ring-gray-200/40 sm:max-w-md md:max-w-lg lg:max-w-xl"
         >
-          <SearchIcon
+          <Search
             className="size-5 shrink-0 text-gray-400"
+            strokeWidth={2}
             aria-hidden
           />
           <input
@@ -32,14 +33,14 @@ const NavBar = () => {
           className="flex size-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
           aria-label="Mensajes"
         >
-          <MessageSquareIcon className="size-5" />
+          <MessageSquare className="size-5" strokeWidth={2} />
         </button>
         <button
           type="button"
           className="relative flex size-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
           aria-label="Anuncios, 3 sin leer"
         >
-          <BellIcon className="size-5" />
+          <Megaphone className="size-5" strokeWidth={2} />
           <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold leading-none text-white">
             3
           </span>
@@ -62,7 +63,7 @@ const NavBar = () => {
             className="flex size-9 shrink-0 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
             aria-label="Cuenta de usuario"
           >
-            <UserIcon className="size-5" />
+            <User className="size-5" strokeWidth={2} />
           </button>
         </div>
       </div>
