@@ -1,4 +1,4 @@
-import { Megaphone, MessageSquare, Search, User } from "lucide-react";
+import { BellIcon, MessageSquareIcon, SearchIcon, UserIcon } from "lucide-animated";
 
 const NavBar = () => {
   return (
@@ -9,9 +9,8 @@ const NavBar = () => {
           htmlFor="navbar-search"
           className="flex w-full max-w-full items-center gap-3 rounded-xl border border-gray-200/80 bg-transparent px-3 py-2.5 transition-colors focus-within:border-gray-300 focus-within:ring-2 focus-within:ring-gray-200/40 sm:max-w-md md:max-w-lg lg:max-w-xl"
         >
-          <Search
+          <SearchIcon
             className="size-5 shrink-0 text-gray-400"
-            strokeWidth={2}
             aria-hidden
           />
           <input
@@ -31,14 +30,14 @@ const NavBar = () => {
           className="flex size-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
           aria-label="Mensajes"
         >
-          <MessageSquare className="size-5" strokeWidth={2} />
+          <MessageSquareIcon className="size-5" />
         </button>
         <button
           type="button"
           className="relative flex size-9 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
           aria-label="Anuncios, 3 sin leer"
         >
-          <Megaphone className="size-5" strokeWidth={2} />
+          <BellIcon className="size-5" />
           <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold leading-none text-white">
             3
           </span>
@@ -61,7 +60,7 @@ const NavBar = () => {
             className="flex size-9 shrink-0 items-center justify-center rounded-full text-gray-600 transition-colors hover:bg-black/[0.04]"
             aria-label="Cuenta de usuario"
           >
-            <User className="size-5" strokeWidth={2} />
+            <UserIcon className="size-5" />
           </button>
         </div>
       </div>

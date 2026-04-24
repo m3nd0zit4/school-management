@@ -1,6 +1,6 @@
 "use client";
 
-import { MoreHorizontal } from "lucide-react";
+import { MenuIcon } from "lucide-animated";
 import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -43,7 +43,7 @@ const EventCalendar = () => {
       />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold my-4">Events</h1>
-        <MoreHorizontal className="size-5 cursor-pointer text-gray-500" strokeWidth={2} />
+        <MenuIcon className="size-5 cursor-pointer text-gray-500" />
       </div>
       <div className="flex flex-col gap-4">
         {events.map((event) => (
