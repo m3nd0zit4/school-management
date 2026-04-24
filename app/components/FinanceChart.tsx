@@ -1,5 +1,5 @@
 "use client";
-import { MoreHorizontal } from "lucide-react";
+import { MenuIcon } from "lucide-animated";
 import {
   LineChart,
   Line,
@@ -79,7 +79,7 @@ const FinanceChart = () => {
     <div className="flex h-full w-full flex-col rounded-xl bg-white p-4">
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Finance</h1>
-        <MoreHorizontal className="size-5 cursor-pointer text-gray-500" strokeWidth={2} />
+        <MenuIcon className="size-5 cursor-pointer text-gray-500" />
       </div>
       <div className="mt-4 min-h-0 flex-1">
         <ResponsiveContainer width="100%" height="100%">
