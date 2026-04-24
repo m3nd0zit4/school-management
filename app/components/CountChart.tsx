@@ -1,5 +1,5 @@
 "use client";
-import { MenuIcon, UserIcon, UserRoundPlusIcon } from "lucide-animated";
+import { MoreHorizontal, Mars, Venus } from "lucide-react";
 import {
   RadialBarChart,
   RadialBar,
@@ -31,7 +31,7 @@ const CountChart = () => {
       {/* TITLE */}
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Students</h1>
-        <MenuIcon className="size-5 cursor-pointer text-gray-500" />
+        <MoreHorizontal className="size-5 cursor-pointer text-gray-500" strokeWidth={2} />
       </div>
       {/* CHART */}
       <div className="relative w-full h-[75%]">
@@ -48,8 +48,8 @@ const CountChart = () => {
           </RadialBarChart>
         </ResponsiveContainer>
         <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2">
-          <UserIcon size={24} className="text-sky-400" aria-label="Boys icon" />
-          <UserRoundPlusIcon size={24} className="text-pink-400" aria-label="Girls icon" />
+          <Mars size={24} className="text-sky-400" aria-label="Boys icon" />
+          <Venus size={24} className="text-pink-400" aria-label="Girls icon" />
         </div>
       </div>
       {/* BOTTOM */}

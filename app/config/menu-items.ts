@@ -1,28 +1,28 @@
-import type { ComponentType, HTMLAttributes } from "react";
 import {
-  BellIcon,
-  BookTextIcon,
-  CalendarCheckIcon,
-  CalendarDaysIcon,
-  ChartBarIncreasingIcon,
-  CircleHelpIcon,
-  ClipboardCheckIcon,
-  LayersIcon,
-  ListIcon,
-  LogoutIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-  UserIcon,
-  UserRoundPlusIcon,
-  UsersIcon,
-  HomeIcon,
-} from "lucide-animated";
+  BarChart3,
+  BookMarked,
+  BookOpen,
+  Calendar,
+  CalendarCheck,
+  ClipboardList,
+  FileQuestion,
+  GraduationCap,
+  Home,
+  Layers,
+  LogOut,
+  Megaphone,
+  MessageSquare,
+  Settings,
+  User,
+  Users,
+  UsersRound,
+  type LucideIcon,
+} from "lucide-react";
 
 export type UserRole = "admin" | "teacher" | "student" | "parent";
-type AnimatedIcon = ComponentType<HTMLAttributes<HTMLDivElement> & { size?: number }>;
 
 export type MenuItem = {
-  icon: AnimatedIcon;
+  icon: LucideIcon;
   label: string;
   href: string;
   visible: UserRole[];
@@ -38,7 +38,7 @@ export const menuSections: MenuSection[] = [
     title: "MENU",
     items: [
       {
-        icon: HomeIcon,
+        icon: Home,
         label: "Home",
         href: "/",
         visible: ["admin", "teacher", "student", "parent"],
@@ -49,19 +49,19 @@ export const menuSections: MenuSection[] = [
     title: "STAFF",
     items: [
       {
-        icon: UsersIcon,
+        icon: Users,
         label: "Teachers",
         href: "/list/teachers",
         visible: ["admin", "teacher"],
       },
       {
-        icon: UserRoundPlusIcon,
+        icon: GraduationCap,
         label: "Students",
         href: "/list/students",
         visible: ["admin", "teacher"],
       },
       {
-        icon: UserIcon,
+        icon: UsersRound,
         label: "Parents",
         href: "/list/parents",
         visible: ["admin", "teacher"],
@@ -73,37 +73,37 @@ export const menuSections: MenuSection[] = [
     items: [
 
       {
-        icon: BookTextIcon,
+        icon: BookOpen,
         label: "Subjects",
         href: "/list/subjects",
         visible: ["admin"],
       },
       {
-        icon: LayersIcon,
+        icon: Layers,
         label: "Classes",
         href: "/list/classes",
         visible: ["admin", "teacher"],
       },
       {
-        icon: ListIcon,
+        icon: BookMarked,
         label: "Lessons",
         href: "/list/lessons",
         visible: ["admin", "teacher"],
       },
       {
-        icon: CircleHelpIcon,
+        icon: FileQuestion,
         label: "Exams",
         href: "/list/exams",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: ClipboardCheckIcon,
+        icon: ClipboardList,
         label: "Assignments",
         href: "/list/assignments",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: ChartBarIncreasingIcon,
+        icon: BarChart3,
         label: "Results",
         href: "/list/results",
         visible: ["admin", "teacher", "student", "parent"],
@@ -114,25 +114,25 @@ export const menuSections: MenuSection[] = [
     title: "CALENDAR",
     items: [
       {
-        icon: CalendarCheckIcon,
+        icon: CalendarCheck,
         label: "Attendance",
         href: "/list/attendance",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: CalendarDaysIcon,
+        icon: Calendar,
         label: "Events",
         href: "/list/events",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: MessageSquareIcon,
+        icon: MessageSquare,
         label: "Messages",
         href: "/list/messages",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: BellIcon,
+        icon: Megaphone,
         label: "Announcements",
         href: "/list/announcements",
         visible: ["admin", "teacher", "student", "parent"],
@@ -143,19 +143,19 @@ export const menuSections: MenuSection[] = [
     title: "OTHER",
     items: [
       {
-        icon: UserIcon,
+        icon: User,
         label: "Profile",
         href: "/profile",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: SettingsIcon,
+        icon: Settings,
         label: "Settings",
         href: "/settings",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: LogoutIcon,
+        icon: LogOut,
         label: "Logout",
         href: "/logout",
         visible: ["admin", "teacher", "student", "parent"],

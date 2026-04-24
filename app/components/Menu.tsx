@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { menuSections, type UserRole } from "@/app/config/menu-items";
 
@@ -15,23 +17,24 @@ export default function Menu({ role = "admin" }: MenuProps) {
     .filter((section) => section.items.length > 0);
 
   return (
-    <nav className="mt-6 flex flex-col gap-6 text-sm">
+    <nav className="mt-5 flex flex-col gap-5 text-sm">
       {sections.map((section) => (
         <div key={section.title}>
-          <p className="mb-2 hidden text-xs font-semibold uppercase tracking-wide text-gray-400 lg:block">
+          <p className="mb-1.5 hidden text-xs font-semibold uppercase tracking-wide text-gray-400 lg:block">
             {section.title}
           </p>
           <ul className="flex flex-col gap-1">
             {section.items.map((item) => {
               const Icon = item.icon;
+
               return (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center justify-center gap-3 rounded-md px-2 py-2 hover:bg-gray-200 lg:justify-start"
+                    className="flex h-9 w-full items-center justify-center gap-2.5 rounded-md px-2 hover:bg-gray-200 lg:justify-start"
                   >
                     <Icon className="size-5 shrink-0 opacity-90" aria-hidden />
-                    <span className="hidden lg:inline text-gray-500">{item.label}</span>
+                    <span className="hidden text-sm leading-none text-gray-600 lg:inline">{item.label}</span>
                   </Link>
                 </li>
               );
