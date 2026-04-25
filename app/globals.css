@@ -102,3 +102,13 @@ body {
 .sidebar-scroll:hover::-webkit-scrollbar-thumb {
   background-color: rgba(100, 116, 139, 0.65);
 }
+
+/* No scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
