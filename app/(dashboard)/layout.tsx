@@ -34,7 +34,7 @@ export default function DashboardLayout({
           </Link>
           <Menu />
         </aside>
-        <div className="min-w-0 flex-1 overflow-y-auto bg-[#F7F8FA]">
+        <div className="min-w-0 flex-1 overflow-y-auto bg-[#F7F8FA] flex flex-col">
           <NavBar />
           {children}
         </div>
