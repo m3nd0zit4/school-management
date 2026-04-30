@@ -1,3 +1,5 @@
+"use client";
+
 import { Megaphone, MessageSquare, Search, User } from "lucide-react";
 
 const NavBar = () => {

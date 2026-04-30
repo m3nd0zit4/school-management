@@ -24,3 +24,183 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Calendar card styling */
+.school-calendar {
+  width: 100% !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+  font-family: inherit;
+}
+
+.school-calendar .react-calendar__navigation {
+  margin-bottom: 8px;
+}
+
+.school-calendar .react-calendar__navigation button {
+  min-width: 36px;
+  border-radius: 8px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.school-calendar .react-calendar__navigation button:enabled:hover,
+.school-calendar .react-calendar__navigation button:enabled:focus {
+  background: #eff6ff;
+}
+
+.school-calendar .react-calendar__month-view__weekdays__weekday {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.school-calendar .react-calendar__tile {
+  border-radius: 8px;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.school-calendar .react-calendar__tile:enabled:hover,
+.school-calendar .react-calendar__tile:enabled:focus {
+  background: #f3f4f6;
+}
+
+.school-calendar .react-calendar__tile--active {
+  background: #2563eb !important;
+  color: #fff !important;
+}
+
+.school-calendar .react-calendar__tile--now {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* Sidebar scrolling: always available, visually minimal */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.65);
+}
+
+/* No scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: #f1f0ff !important;
+  color: #509ae0 !important;
+  margin-left: 2px !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  color: #3d71d1 !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: #dbeafe !important;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+
+.rbc-event {
+  border: none !important;
+  color: black !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  width: 99% !important;
+}
+
+.rbc-event:nth-child(1) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(2) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(3) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(4) {
+  background-color: #fdf2fb !important;
+}
+.rbc-event:nth-child(5) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(6) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(7) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(8) {
+  background-color: #fdf2fb !important;
+}
+
+.rbc-event-label{
+  color: gray !important;
+  margin-bottom: 5px;
+}

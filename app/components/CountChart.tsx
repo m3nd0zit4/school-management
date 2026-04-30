@@ -3,7 +3,6 @@ import { MoreHorizontal, Mars, Venus } from "lucide-react";
 import {
   RadialBarChart,
   RadialBar,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 

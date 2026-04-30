@@ -1,7 +1,5 @@
-import type { LucideIcon } from "lucide-react";
 import {
   BarChart3,
-  Bell,
   BookMarked,
   BookOpen,
   Calendar,
@@ -18,6 +16,7 @@ import {
   User,
   Users,
   UsersRound,
+  type LucideIcon,
 } from "lucide-react";
 
 export type UserRole = "admin" | "teacher" | "student" | "parent";
@@ -39,7 +38,7 @@ export const menuSections: MenuSection[] = [
     title: "MENU",
     items: [
       {
-        icon: Home,
+        icon: Home, 
         label: "Home",
         href: "/",
         visible: ["admin", "teacher", "student", "parent"],
