@@ -3,6 +3,7 @@ import Pagination from "@/app/components/Pagination";
 import Table from "@/app/components/Table";
 import LookUpTable from "@/app/components/LookUpTable";
 import { role, teachersData } from "@/app/lib/data";
+import { ArrowUpDown, Eye, ListFilter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,7 +59,7 @@ const TeacherListPage = () => {
   const renderRow = (item: Teacher) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
+      className="border-b border-gray-200 text-sm even:bg-slate-50 hover:bg-indigo-50"
     >
       <td className="flex items-center gap-4 p-4">
         <Image
@@ -81,8 +82,8 @@ const TeacherListPage = () => {
       <td>
         <div className="flex items-center gap-2">
           <Link href={`/list/teachers/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
-              <Image src="/view.png" alt="" width={16} height={16} />
+            <button className="flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-blue-200 transition-colors hover:bg-blue-300">
+              <Eye className="size-4 text-gray-700" strokeWidth={2} aria-hidden />
             </button>
           </Link>
           {role === "admin" && (
@@ -104,11 +105,11 @@ const TeacherListPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <LookUpTable />
           <div className="flex items-center gap-4 self-end">
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-              <Image src="/filter.png" alt="" width={14} height={14} />
+            <button className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-200 transition-colors hover:bg-amber-300">
+              <ListFilter className="size-3.5 text-gray-700" strokeWidth={2} aria-hidden />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-              <Image src="/sort.png" alt="" width={14} height={14} />
+            <button className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-amber-200 transition-colors hover:bg-amber-300">
+              <ArrowUpDown className="size-3.5 text-gray-700" strokeWidth={2} aria-hidden />
             </button>
             {role === "admin" && (
               // <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
