@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
+import { Plus, Pencil, Trash2, X } from "lucide-react";
 import { useState, type ReactElement } from "react";
 
 // USE LAZY LOADING
@@ -22,6 +22,12 @@ const forms: {
   teacher: (type, data) => <TeacherForm type={type} data={data} />,
   student: (type, data) => <StudentForm type={type} data={data} />
 };
+
+const triggerIcons = {
+  create: Plus,
+  update: Pencil,
+  delete: Trash2,
+} as const;
 
 const FormModal = ({
   table,
@@ -49,12 +55,13 @@ const FormModal = ({
   const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
   const bgColor =
     type === "create"
-      ? "bg-lamaYellow"
+      ? "bg-amber-200 hover:bg-amber-300"
       : type === "update"
-      ? "bg-lamaSky"
-      : "bg-lamaPurple";
+      ? "bg-blue-200 hover:bg-blue-300"
+      : "bg-pink-200 hover:bg-pink-300";
 
   const [open, setOpen] = useState(false);
+  const TriggerIcon = triggerIcons[type];
 
   const Form = () => {
     return type === "delete" && id ? (
@@ -62,7 +69,7 @@ const FormModal = ({
         <span className="text-center font-medium">
           All data will be lost. Are you sure you want to delete this {table}?
         </span>
-        <button className="bg-red-700 text-white py-2 px-4 rounded-md border-none w-max self-center">
+        <button className="w-max self-center rounded-md border-none bg-red-700 px-4 py-2 text-white cursor-pointer">
           Delete
         </button>
       </form>
@@ -76,10 +83,10 @@ const FormModal = ({
   return (
     <>
       <button
-        className={`${size} flex items-center justify-center rounded-full ${bgColor}`}
+        className={`${size} flex cursor-pointer items-center justify-center rounded-full transition-colors ${bgColor}`}
         onClick={() => setOpen(true)}
       >
-        <Image src={`/${type}.png`} alt="" width={16} height={16} />
+        <TriggerIcon className="size-4 text-gray-700" strokeWidth={2} aria-hidden />
       </button>
       {open && (
         <div className="w-screen h-screen absolute left-0 top-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
@@ -89,7 +96,7 @@ const FormModal = ({
               className="absolute top-4 right-4 cursor-pointer"
               onClick={() => setOpen(false)}
             >
-              <Image src="/close.png" alt="" width={14} height={14} />
+              <X className="size-3.5 text-gray-500" strokeWidth={2} aria-hidden />
             </div>
           </div>
         </div>
